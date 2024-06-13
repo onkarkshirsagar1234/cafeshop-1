@@ -47,9 +47,8 @@ public class Cafe {
 	@Column(name = "AadharNo")
 	private String aadharNo;
 
-	@NotFound(action = NotFoundAction.IGNORE)
-	@OneToOne(targetEntity = CafeAddress.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	@JoinColumn(name = "ID", referencedColumnName = "addressID")
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@JoinColumn(name = "CafeAddressID" )
 	private CafeAddress cafeAddress;
 
 	public Integer getCafeID() {

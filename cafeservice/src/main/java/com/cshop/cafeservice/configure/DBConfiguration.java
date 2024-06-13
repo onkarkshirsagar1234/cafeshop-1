@@ -47,6 +47,7 @@ public class DBConfiguration {
 			settings.put(Environment.SHOW_SQL, properties.getProperty("hibernate.show_sql"));
 			settings.put(Environment.CURRENT_SESSION_CONTEXT_CLASS,
 					properties.getProperty("hibernate.current_session_context_class"));
+			settings.put(Environment.HBM2DDL_AUTO,properties.getProperty("hibernate.hbm2ddl.auto"));
 			settings.put("hibernate.connection.characterEncoding", "utf8");
 
 			configuration.setProperties(settings);
